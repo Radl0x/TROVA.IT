@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <meta name="description" content="Trova il professionista giusto per il tuo lavoro. Pubblica una richiesta e ricevi proposte pertinenti.">
+  <title>Trova — Ogni problema ha il suo professionista</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+<script src="https://kit.fontawesome.com/223110ab61.js" crossorigin="anonymous"></script></head>
+<body>
+  <div class="announcement"><span class="status-dot"></span> Il modo più intelligente per trovare chi fa al caso tuo <span class="announcement-pill">Un'unica richiesta, professionisti pertinenti</span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Trova, homepage"><img src="assets/mark.svg" alt="" width="38" height="38"><span>trova<span class="brand-dot">.</span></span></a>
+    <nav class="desktop-nav" aria-label="Navigazione principale">
+      <a href="pages/directory.html">Esplora professionisti</a>
+      <a href="#come-funziona">Come funziona</a>
+      <a class="pro-access-nav" href="pages/login-professionista.html"><span aria-hidden="true">✦</span> Accesso professionisti <span class="pro-access-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-quiet btn-sm" href="pages/login-cliente.html">Accedi</a>
+      <a class="btn btn-primary btn-sm" href="pages/nuova-richiesta.html">Pubblica richiesta <span aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a>
+      <button class="icon-btn menu-toggle" aria-label="Apri menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span> IL MATCHING, FATTO BENE</div>
+        <h1>Ogni problema ha<br>il suo <span class="text-gradient">professionista.</span></h1>
+        <p class="hero-lede">Racconta cosa ti serve. Trova chi sa come aiutarti.<br>Non una lista infinita: persone con le competenze giuste per il tuo lavoro.</p>
+        <div class="hero-trust">
+          <div class="avatar-stack" aria-hidden="true"><span>G</span><span>M</span><span>A</span><span>+</span></div>
+          <div><strong>La richiesta giusta cambia tutto.</strong><small>Tu descrivi il lavoro. Al matching pensiamo noi.</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-glow"></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-chip chip-top"><span class="chip-check"><i class="fa-solid fa-check" aria-hidden="true"></i></span><span><strong>Competenze pertinenti</strong><small>Prima di tutto</small></span></div>
+        <div class="match-card">
+          <div class="match-card-top"><div class="mini-label"><span class="status-dot"></span> ESEMPIO DI MATCHING</div><span class="sparkle">✦</span></div>
+          <div class="match-title">Ristrutturazione bagno</div>
+          <div class="match-subtitle">Lavoro completo · Olbia e dintorni</div>
+          <div class="match-rule"><span class="rule-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></span><div><strong>Requisiti essenziali</strong><small>Servizio, zona e tipo di intervento</small></div><span class="rule-state">OK</span></div>
+          <div class="match-rule"><span class="rule-icon"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span><div><strong>Compatibilità valutata</strong><small>Portfolio, disponibilità e budget</small></div><span class="rule-state soft">FIT</span></div>
+          <div class="match-progress"><span></span></div>
+          <div class="match-foot"><span>Anteprima illustrativa</span><span class="match-foot-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span></div>
+        </div>
+        <div class="floating-chip chip-bottom"><span class="chip-round"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span><span><strong>Solo richieste pertinenti</strong><small>Meno rumore, più valore</small></span></div>
+        <div class="visual-caption"><span class="caption-line"></span> DALLA NECESSITÀ ALLA COMPETENZA</div>
+      </div>
+    </section>
+
+    <section class="request-start section-shell" aria-labelledby="start-title">
+      <div class="request-start-heading">
+        <div><span class="section-kicker">INIZIA DA QUI</span><h2 id="start-title">Di cosa hai bisogno?</h2><p>Seleziona un ambito: ti guideremo con le domande giuste.</p></div>
+        <span class="step-indicator"><span class="step-dot active"></span><span class="step-dot"></span><span class="step-dot"></span> <small>Passo 1 di 3</small></span>
+      </div>
+      <div class="category-picker" id="categoryPicker">
+        <button class="category-option selected" data-category="Casa" data-icon="⌂"><span class="category-icon icon-home"><i class="fa-solid fa-house" aria-hidden="true"></i></span><strong>Casa</strong><small>Ristrutturazioni e impianti</small><span class="category-arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></button>
+        <button class="category-option" data-category="Auto" data-icon="◇"><span class="category-icon icon-car">◇</span><strong>Auto</strong><small>Meccanica e carrozzeria</small><span class="category-arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></button>
+        <button class="category-option" data-category="Tecnologia" data-icon="⌘"><span class="category-icon icon-tech">⌘</span><strong>Tecnologia</strong><small>Dispositivi e assistenza</small><span class="category-arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></button>
+        <button class="category-option" data-category="Creatività" data-icon="✳"><span class="category-icon icon-creative"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span><strong>Creatività</strong><small>Tatuaggi, design e foto</small><span class="category-arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></button>
+        <button class="category-option" data-category="Riparazioni" data-icon="⌁"><span class="category-icon icon-repair">⌁</span><strong>Riparazioni</strong><small>Interventi specializzati</small><span class="category-arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></button>
+        <button class="category-option" data-category="Professionisti" data-icon="✦"><span class="category-icon icon-pro">✦</span><strong>Professionisti</strong><small>Servizi e consulenze</small><span class="category-arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></button>
+      </div>
+      <div class="quick-request">
+        <label class="sr-only" for="quickNeed">Descrivi brevemente cosa ti serve</label>
+        <div class="quick-input-wrap"><span class="quick-input-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span><input id="quickNeed" type="text" placeholder="Es. ristrutturazione completa di un bagno…"><span class="input-hint">Puoi aggiungere dettagli dopo</span></div>
+        <button class="btn btn-primary btn-large" id="startRequest">Crea la richiesta <span>→</span></button>
+      </div>
+      <p class="demo-note"><span><i class="fa-solid fa-circle-info" aria-hidden="true"></i></span> Nessun professionista viene contattato da questa anteprima: è una dimostrazione frontend.</p>
+    </section>
+
+    <section class="how-section section-shell" id="come-funziona">
+      <div class="section-heading centered"><span class="section-kicker">SEMPLICE, MA MIRATO</span><h2>Tre passi. Una soluzione.</h2><p>Il tuo tempo conta. Anche la precisione della richiesta.</p></div>
+      <div class="steps-grid">
+        <article class="step-card"><div class="step-top"><span class="step-number">01</span><span class="step-symbol">✎</span></div><h3>Spiega cosa ti serve</h3><p>Un percorso guidato raccoglie dettagli, preferenze, zona e allegati utili.</p><div class="step-line"><span></span></div></article>
+        <article class="step-card featured-step"><div class="step-top"><span class="step-number">02</span><span class="step-symbol">⌘</span></div><h3>Il matching fa ordine</h3><p>I requisiti essenziali filtrano i profili. Le altre preferenze aiutano a ordinare le compatibilità.</p><div class="step-line"><span></span></div></article>
+        <article class="step-card"><div class="step-top"><span class="step-number">03</span><span class="step-symbol"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></div><h3>Valuta le proposte</h3><p>Confronta preventivi, portfolio e tempi. Parla con i professionisti in un unico posto.</p><div class="step-line"><span></span></div></article>
+      </div>
+    </section>
+
+    <section class="specialty-section section-shell">
+      <div class="section-heading split-heading"><div><span class="section-kicker">OLTRE LE CATEGORIE</span><h2>Il dettaglio fa<br>la differenza.</h2></div><p>Un buon risultato parte da una competenza specifica. Per questo ogni profilo racconta servizi, specializzazioni e lavori reali — non soltanto un titolo.</p></div>
+      <div class="specialty-grid">
+        <article class="specialty-card specialty-large"><div class="specialty-art bathroom-art"><span class="art-sun"></span><span class="art-tile tile-a"></span><span class="art-tile tile-b"></span><span class="art-tile tile-c"></span><span class="art-plant"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span></div><div class="specialty-content"><span class="tag">CASA · RISTRUTTURAZIONE</span><h3>Un bagno, rifatto come si deve.</h3><p>Filtra per intervento completo, zona servita e disponibilità.</p><a href="pages/directory.html?category=Casa" class="text-link">Esplora professionisti <span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a></div></article>
+        <article class="specialty-card"><div class="specialty-art tattoo-art"><div class="tattoo-ring ring-a"></div><div class="tattoo-ring ring-b"></div><div class="tattoo-center">✳</div><span class="tattoo-label">FINE LINE · BLACKWORK · REALISMO</span></div><div class="specialty-content"><span class="tag">CREATIVITÀ · TATUAGGI</span><h3>La mano giusta per la tua idea.</h3><p>Stile, dimensioni, zona del corpo e portfolio pertinente.</p><a href="pages/directory.html?category=Creatività" class="text-link">Esplora specializzazioni <span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a></div></article>
+      </div>
+    </section>
+
+    <section class="pro-cta section-shell">
+      <div class="pro-cta-content"><span class="section-kicker light-kicker">PER CHI SA FARE</span><h2>Il tuo lavoro merita<br>richieste pertinenti.</h2><p>Racconta cosa fai davvero. Ricevi opportunità coerenti con servizi, competenze e zona operativa.</p><a class="btn btn-white btn-large" href="pages/login-professionista.html">Accedi all'area professionista <span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></a></div>
+      <div class="pro-cta-art" aria-hidden="true"><div class="cta-orbit cta-orbit-a"></div><div class="cta-orbit cta-orbit-b"></div><div class="cta-core">t<span>.</span></div><div class="cta-bubble bubble-a">Specializzazione</div><div class="cta-bubble bubble-b">Match pertinente ✓</div><div class="cta-bubble bubble-c">Portfolio</div></div>
+    </section>
+
+    <section class="faq-section section-shell">
+      <div class="section-heading"><span class="section-kicker">DOMANDE FREQUENTI</span><h2>Prima di iniziare.</h2><p>Le cose importanti, senza giri di parole.</p></div>
+      <div class="faq-list">
+        <details><summary>Come vengono scelti i professionisti che vedono una richiesta?<span>+</span></summary><p>Il modello previsto verifica prima i requisiti essenziali, come servizio e area operativa. Tra i profili idonei, altri criteri aiutano a valutare la compatibilità. In questa demo il matching è illustrativo.</p></details>
+        <details><summary>Devo avere tutte le informazioni subito?<span>+</span></summary><p>No. Il flusso previsto permette di salvare una bozza e riprenderla in seguito. La richiesta entra nel matching solo dopo aver completato i dati essenziali.</p></details>
+        <details><summary>Chi può vedere le foto che allego?<span>+</span></summary><p>Il progetto prevede che gli allegati siano accessibili ai professionisti compatibili che aprono i dettagli della richiesta. Le restrizioni reali richiederanno controlli server-side nella fase backend.</p></details>
+        <details><summary>È già possibile inviare richieste reali?<span>+</span></summary><p>No. Questa è una demo frontend: le azioni mostrano l'esperienza e usano dati dimostrativi, senza inviare richieste o contattare persone reali.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main"><a class="brand footer-brand" href="index.html"><img src="assets/mark.svg" alt="" width="34" height="34"><span>trova<span class="brand-dot">.</span></span></a><p>Il matching tra ciò che ti serve<br>e chi sa farlo bene.</p><div class="footer-links"><a href="pages/directory.html">Esplora</a><a href="pages/nuova-richiesta.html">Pubblica richiesta</a><a href="pages/login-professionista.html">Per professionisti</a><a href="pages/registrazione-cliente.html">Crea account</a><a href="pages/admin-login.html">Area amministratore</a></div></div>
+    <div class="footer-bottom"><span>© 2026 Trova · Prototipo dimostrativo</span><span><span class="status-dot"></span> Frontend demo · Nessun dato inviato</span></div>
+  </footer>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+<script src="js/modal-system.js"></script><script src="js/demo-repository.js"></script><script src="js/phase2-actions.js"></script><script src="js/demo-enhancements.js"></script><script src="js/trova-communications.js"></script></body>
+</html>

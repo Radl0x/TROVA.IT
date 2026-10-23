@@ -1,0 +1,14 @@
+(()=>{'use strict';
+const root=document.querySelector('#publicProfessionalProfile');if(!root)return;
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key)||'null')??fallback}catch{return fallback}};
+const id=new URLSearchParams(location.search).get('demo');
+const saved=read('trova_pro_public_profile_v1',null);
+if(id==='saved-professional-profile'&&saved?.businessName){
+ const portfolio=(saved.portfolio||[]).map((p,i)=>`<figure class="pro-portfolio-thumb"><img src="${p.dataUrl}" alt="Lavoro ${i+1}"><figcaption>${esc(p.name||`Lavoro ${i+1}`)}</figcaption></figure>`).join('');
+ const reviews=read('trova_pro_reviews_v1',[]).filter(r=>Number(r.rating)>=1&&Number(r.rating)<=5);const avg=reviews.length?reviews.reduce((n,r)=>n+Number(r.rating),0)/reviews.length:0;
+ root.innerHTML=`${saved.coverPhoto?`<img class="saved-pro-cover" style="max-height:320px" src="${saved.coverPhoto}" alt="Copertina di ${esc(saved.businessName)}">`:''}<div class="saved-pro-modal-head" style="padding:20px">${saved.profilePhoto?`<img src="${saved.profilePhoto}" alt="Foto profilo">`:''}<div><span class="section-kicker">PROFILO PROFESSIONALE</span><h1>${esc(saved.businessName)}</h1><p>⌖ ${esc(saved.city||'Città non indicata')}</p><p class="pro-review-stars">${avg?'★'.repeat(Math.round(avg))+'☆'.repeat(5-Math.round(avg))+' '+avg.toFixed(1).replace('.',',')+'/5':'☆☆☆☆☆ Nessuna valutazione'} · ${reviews.length} recensioni</p></div></div><div style="padding:0 20px 22px"><h2>Presentazione</h2><p>${esc(saved.description||'Il professionista non ha ancora aggiunto una presentazione.')}</p><h2>Servizi</h2><div class="tag-list">${(saved.services||[]).map(x=>`<span>${esc(x)}</span>`).join('')||'<span>Non specificati</span>'}</div><h2 style="margin-top:24px">Portfolio e lavori</h2><div class="pro-portfolio-preview">${portfolio||'<p class="muted">Nessuna foto caricata.</p>'}</div><h2 style="margin-top:24px">Recensioni</h2><div class="pro-reviews-list">${reviews.length?reviews.map(r=>`<article class="pro-review-card"><div class="pro-review-head"><strong>${esc(r.clientName||'Cliente')}</strong><span class="pro-review-stars">${'★'.repeat(Number(r.rating))}${'☆'.repeat(5-Number(r.rating))}</span></div><p>${esc(r.comment||'')}</p></article>`).join(''):'<p class="muted">Non sono ancora presenti recensioni.</p>'}</div><a class="btn btn-outline" href="directory.html" style="margin-top:22px">← Torna alla directory</a></div>`;
+}else{
+ root.innerHTML='<div class="empty-state"><div class="empty-state-icon">⌕</div><h1>Profilo non disponibile</h1><p>Questo profilo dimostrativo non è disponibile in questo browser. Torna alla directory per consultare i profili pubblicati.</p><a class="btn btn-primary" href="directory.html">Esplora professionisti ↗</a></div>';
+}
+})();

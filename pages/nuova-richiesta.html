@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f8fafc"><title>Pubblica una richiesta — Trova</title><link rel="icon" href="../assets/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="../css/styles.css"><script src="https://kit.fontawesome.com/223110ab61.js" crossorigin="anonymous"></script></head>
+<body>
+<div class="announcement"><span class="status-dot"></span> Richiesta guidata · Puoi salvare e riprendere in seguito</div>
+<header class="site-header"><a class="brand" href="../index.html"><img src="../assets/mark.svg" alt="" width="38" height="38"><span>trova<span class="brand-dot">.</span></span></a><nav class="desktop-nav"><a href="directory.html">Esplora professionisti</a><a href="../index.html#come-funziona">Come funziona</a><a href="login-professionista.html">Per i professionisti</a></nav><div class="header-actions"><a class="btn btn-quiet btn-sm" href="login-cliente.html">Area cliente</a><a class="btn btn-outline btn-sm" href="../index.html">Esci dalla procedura</a><button class="icon-btn menu-toggle" aria-label="Apri menu" aria-expanded="false"><span></span><span></span></button></div></header>
+<main class="section-shell page-top">
+  <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span>Nuova richiesta</span></div>
+  <div class="page-header"><div><span class="section-kicker">IL PRIMO PASSO VERSO LA SOLUZIONE</span><h1>Raccontaci cosa ti serve.</h1><p>Ti faremo solo le domande utili per il tuo lavoro. I dati essenziali servono a trovare professionisti davvero pertinenti.</p></div><span class="pill"><span class="status-dot"></span> Bozza modificabile</span></div>
+  <div class="wizard-layout">
+    <div>
+      <div class="surface-card form-section">
+        <div class="form-section-heading"><span class="form-section-icon">⌘</span><div><h2>Partiamo dalle basi</h2><p>Passo <span id="stepCount">1</span> di 3 · Seleziona settore e servizio</p></div></div>
+        <div class="progress-track"><span id="progressBar"></span></div>
+      </div>
+      <form id="requestWizard" novalidate>
+        <section class="surface-card form-section wizard-page" data-step="1">
+          <div class="form-grid">
+            <div class="field"><label for="category">Settore *</label><select id="category" required><option value="">Seleziona un settore</option><option>Casa</option><option>Auto</option><option>Tecnologia</option><option>Creatività</option><option>Riparazioni</option><option>Professionisti</option></select></div>
+            <div class="field"><label for="service">Servizio specifico *</label><select id="service" required><option value="">Prima scegli il settore</option></select></div>
+            <div class="field full"><label for="title">Dai un titolo alla richiesta *</label><input id="title" required maxlength="90" placeholder="Es. Ristrutturazione completa del bagno"><span class="helper">Descrivi il risultato che vuoi ottenere, in poche parole.</span></div>
+            <div class="field full"><label for="description">Descrizione del lavoro *</label><textarea id="description" required minlength="20" placeholder="Spiega cosa vuoi fare, cosa è già presente e quali risultati ti aspetti…"></textarea><span class="helper">Più dettagli pertinenti inserisci, più sarà facile valutare la compatibilità. Minimo 20 caratteri.</span></div>
+          </div>
+          <section class="adaptive-filter-panel" aria-labelledby="adaptiveFieldsTitle">
+            <div class="adaptive-panel-heading"><span class="form-section-icon">⌘</span><div><h3 id="adaptiveFieldsTitle">Dettagli specifici del servizio</h3><p>I campi cambiano in base al settore selezionato. Compila quelli pertinenti: puoi lasciare vuote le informazioni che non conosci.</p></div></div>
+            <div id="adaptiveFields" class="form-grid adaptive-fields"><div class="adaptive-empty">Seleziona un settore e un servizio per vedere i filtri specifici.</div></div>
+          </section>
+        </section>
+        <section class="surface-card form-section wizard-page" data-step="2" hidden>
+          <div class="form-section-heading"><span class="form-section-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span><div><h2>Luogo, tempi e budget</h2><p>Indica i vincoli e le preferenze del lavoro.</p></div></div>
+          <div class="form-grid">
+            <div class="field"><label for="location">Zona dell’intervento (comune o area operativa) *</label><input id="location" list="italianCitiesList" autocomplete="address-level2" required placeholder="Scrivi o seleziona un comune italiano"><datalist id="italianCitiesList"></datalist><span class="helper">Scegli un comune dai suggerimenti oppure inizia a digitare. Non inserire indirizzi privati.</span></div>
+            <div class="field"><label for="timing">Tempistica richiesta *</label><select id="timing" required><option value="">Scegli una tempistica</option><option>Il prima possibile</option><option>Entro 2 settimane</option><option>Entro un mese</option><option>Entro 3 mesi</option><option>Sono flessibile</option></select></div><div class="field"><label for="workMode">Modalità del servizio *</label><select id="workMode" required><option value="">Scegli la modalità</option><option value="presence">In presenza</option><option value="remote">Da remoto</option><option value="mixed">Indifferente / da concordare</option></select><span class="helper">Aiuta a escludere professionisti che non possono svolgere il lavoro nella modalità richiesta.</span></div>
+            <div class="field"><label for="budget">Budget massimo indicativo</label><select id="budget"><option value="">Preferisco parlarne</option><option>Fino a 250 €</option><option>250–1.000 €</option><option>1.000–5.000 €</option><option>5.000–15.000 €</option><option>Oltre 15.000 €</option></select></div>
+            <div class="field"><label for="budgetType">Quanto è flessibile il budget?</label><select id="budgetType"><option>Una preferenza flessibile</option><option>Un limite essenziale</option><option>Da definire con il professionista</option></select></div>
+            <div class="field full"><label for="requirements">Requisiti irrinunciabili (facoltativo)</label><textarea id="requirements" placeholder="Es. deve eseguire l'intero lavoro, non solo una parte; deve operare nella mia zona…"></textarea><span class="helper">Inserisci qui solo i requisiti che devono essere soddisfatti per forza.</span></div>
+          </div>
+
+        </section>
+        <section class="surface-card form-section wizard-page" data-step="3" hidden>
+          <div class="form-section-heading"><span class="form-section-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span><div><h2>Ultimi dettagli e riepilogo</h2><p>Controlla la richiesta prima di confermarla.</p></div></div>
+          <div class="form-grid">
+            <div class="field full"><label for="attachments">Foto o documenti</label><input id="attachments" type="file" multiple accept="image/*,.pdf"><span class="helper">Le foto e i PDF vengono conservati localmente in questo browser (massimo 2 MB complessivi). Non vengono caricati online.</span><div id="fileList" class="tiny muted"></div></div>
+            <div class="field full"><label for="contactEmail">Email per le notifiche *</label><input id="contactEmail" type="email" required placeholder="nome@esempio.it"><span class="helper">L’indirizzo viene controllato per formato. La verifica tramite email richiede un servizio di invio.</span></div><div class="field full"><label class="matching-filter-option"><input id="confirmIntent" type="checkbox" required><span><strong>Confermo che la richiesta è attuale e desidero ricevere risposte *</strong><small>La richiesta deve essere attuale e i dati forniti devono essere corretti.</small></span></label></div><div class="field full"><label class="matching-filter-option"><input id="simulateEmailVerification" type="checkbox" required><span><strong>Confermo di aver accesso a questa email *</strong><small>Usa un indirizzo email corretto per ricevere eventuali comunicazioni sul lavoro.</small></span></label></div>
+          </div>
+          <div class="notice" style="margin-top:20px"><span><i class="fa-solid fa-circle-info" aria-hidden="true"></i></span><div><strong>Privacy prevista:</strong> gli allegati saranno accessibili soltanto ai professionisti compatibili che aprono i dettagli. I dati identificativi non necessari saranno protetti per impostazione predefinita. In questa versione gli allegati restano in questo browser e non vengono caricati online.</div></div>
+          <div id="reviewBox" class="surface-card" style="padding:18px;margin-top:18px;background:#f8faff;box-shadow:none"></div>
+        </section>
+        <div class="wizard-actions"><button class="btn btn-outline" type="button" id="prevStep" disabled>← Indietro</button><div style="display:flex;gap:9px"><button class="btn btn-quiet" type="button" id="saveDraft">Salva bozza</button><button class="btn btn-primary" type="button" id="nextStep">Continua →</button></div></div>
+      </form>
+    </div>
+    <aside class="surface-card wizard-aside">
+      <span class="section-kicker">IL TUO PERCORSO</span><h3 style="font-family:var(--display);font-size:18px;letter-spacing:-.04em;margin:8px 0 0">Una richiesta chiara, migliori corrispondenze.</h3>
+      <div class="wizard-steps"><div class="wizard-step active" data-wstep="1"><span class="num">1</span><span>Il lavoro</span></div><div class="wizard-step" data-wstep="2"><span class="num">2</span><span>Luogo e preferenze</span></div><div class="wizard-step" data-wstep="3"><span class="num">3</span><span>Riepilogo</span></div></div>
+      <div class="wizard-aside-note"><strong>Perché chiediamo questi dettagli?</strong><br>Servono a distinguere i requisiti essenziali dalle preferenze e a evitare candidature poco pertinenti.</div>
+      <div style="margin-top:20px;padding-top:17px;border-top:1px solid #eef1f6"><div class="tiny muted">STATO DELLA RICHIESTA</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px"><span class="pill amber" id="draftState">Non ancora salvata</span></div><p class="tiny muted" style="line-height:1.7">La bozza rimane soltanto in questa sessione del browser. Il salvataggio permanente richiederà il backend.</p></div>
+    </aside>
+  </div>
+</main>
+<footer class="site-footer"><div class="footer-bottom"><span>© 2026 Trova · Prototipo dimostrativo</span><span><span class="status-dot"></span> Nessun dato inviato</span></div></footer>
+<div class="toast-region" id="toastRegion" aria-live="polite"></div>
+<script src="../js/app.js"></script><script src="../js/service-catalog.js"></script><script src="../js/pro-service-skills.js"></script><script src="../js/demo-workflow.js"></script><script src="../js/italian-cities.js"></script><script src="../js/request.js"></script>
+<script src="../js/modal-system.js"></script><script src="../js/demo-repository.js"></script><script src="../js/phase2-actions.js"></script><script src="../js/demo-enhancements.js"></script><script src="../js/trova-communications.js"></script></body></html>
